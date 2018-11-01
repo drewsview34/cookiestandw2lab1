@@ -198,6 +198,25 @@ new Store('Capitol Hill', 20, 38, 2.3);
 new Store('Seattle Center', 2, 16, 4.6);
 
 
+var salesFormEl = document.getElementById('sales-form');
+salesFormEl.addEventListener('submit', function() {});
+
+document.getElementById('sales-form').addEventListener('submit', function(event) {
+
+  event.preventDefault();
+
+  var name = event.target.storename.value;
+  var min = event.target.min.value;
+  var max = event.target.max.value;
+  var avg = event.target.avg.value;
+
+  new Store(name, min, max, avg);
+
+  event.target.storename.value = '';
+  event.target.min.value = '';
+  event.target.max.value = '';
+  event.target.avg.value = '';
+});
 
 
 
