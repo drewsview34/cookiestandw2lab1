@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Document</title>
+  <title>Cookie Stand</title>
 </head>
 <body>
   <header></header>
-  <main id="main-content">
-    <form id="sales-form">
+  <main id="main-content"> <!-- This is the id that will anchor JS will use to display table information -->
+    <form id="sales-form"> <!-- This is the id JS will use to display the users entered info into our form -->
       <label>Store Name
-        <input name="storename" type="text" placeholder="Bellevue Square">
+        <input name="storename" type="text" placeholder="Enter Store Name"> <!--Form field -->
       </label>
       <label>Minimum Customers Per Hour
-        <input name="min" type="number" placeholder="23">
+        <input name="min" type="number" placeholder="00"> <!--Form field -->
       </label>
       <label>Maximum Customers Per Hour
-        <input name="max" type="number" placeholder="45">
+        <input name="max" type="number" placeholder="00"> <!--Form field -->
       </label>
       <label for="avg">Average Cookies Per Customer</label>
-      <input id="avg" name="avg" type="number" step='0.01' placeholder="4.3">
+      <input id="avg" name="avg" type="number" step='0.01' placeholder="0.0"> <!-- Form field -->
       <button type="submit">Submit</button>
     </form>
   </main>
   <footer></footer>
-  <script src="cookiestand.js"></script>
+  <script src="cookiestand.js"></script> <!--JavaScript Source-->
 </body>
 </html>
