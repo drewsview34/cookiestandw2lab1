@@ -197,21 +197,27 @@ new Store('Seattle Center', 11, 38, 3.7);
 new Store('Capitol Hill', 20, 38, 2.3);
 new Store('Seattle Center', 2, 16, 4.6);
 
-
+// We are creating a salesFormEl variable  to be used to get the HTML document element names sales-form
 var salesFormEl = document.getElementById('sales-form');
+
+// This is an event listener waiting for the user to press the submit with the mouse.
 salesFormEl.addEventListener('submit', function() {});
 
+//We are getting the HTML Element, sales-form and adding an event listener when the submit happens; the function will happen
 document.getElementById('sales-form').addEventListener('submit', function(event) {
-
+  // This prevents the defualt from occuring
   event.preventDefault();
 
+  // This is the differnt variables assigned a value to populate in the table that is to be used when we use the new Store syntax.
   var name = event.target.storename.value;
   var min = event.target.min.value;
   var max = event.target.max.value;
   var avg = event.target.avg.value;
 
+  // This is the new Store syntax
   new Store(name, min, max, avg);
 
+  // This indicated the values that will be entered by the user which will be inbtween the single qoutes.
   event.target.storename.value = '';
   event.target.min.value = '';
   event.target.max.value = '';
