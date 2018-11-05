@@ -25,7 +25,7 @@ function Store(name, min, max, avg) {
 // This is creating a function and assigning this function the generateRandomCustPerHour variable to use the Store constructor object as it's prototype to use.
 Store.prototype.generateRandomCustPerHour = function (min, max) {
   for (var i = 0; i < hoursOfOps.length; i++) {
-    var randomCust = Math.floor(Math.random() * (max - min + 1) + min);
+    var randomCust = Math.round(Math.random() * (max - min + 1) + min);
     this.custPerHour.push(randomCust);
   }
 };
@@ -131,7 +131,7 @@ function createTableBody() {
 // Creating a function that creates the foot at the bottom of the table
 function createTableFooter() {
   var tfootElCheck = document.getElementById('tbl-foot');
-  // We are checking the footer to make sure it's up to date and removing the refresh default 
+  // We are checking the footer to make sure it's up to date and removing the refresh default
   if (tfootElCheck) {
     tfootElCheck.remove();
   }
